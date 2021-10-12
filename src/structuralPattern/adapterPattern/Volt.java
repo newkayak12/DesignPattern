@@ -1,4 +1,4 @@
-package structuralPattern.adapterPattern.objectAdapter;
+package structuralPattern.adapterPattern;
 
 public class Volt {
 	private int volts;
