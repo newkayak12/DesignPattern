@@ -1,0 +1,22 @@
+객체 집합의 상호 작용을 캡슐화 하는 객체를 정의한다. 
+>> 유지 보수하는 데 도움을 준다. 
+
+중재자 패턴은 다양한 객체과 클래스 간의 복잡한 커뮤니케이션을 줄여준다. 이는 각기 다른 클래스 간의 커뮤니케이션을 핸들링한다. 그리고 쉽게 결합도를 낮추면서 유지보수 할 수 있도록 도와준다.
+
+>> 장점
+많은 클래스들의 결합도를 낮춰준다.
+객체 프로토콜은 단순화한다.
+제어를 중앙화한다.
+각기 다른 컴포넌트들은 간단해지고 다루기 쉬워진다. 이는 서로가 메시지를 다른 곳으로 보낼 필요가 없어지기 때문이다. 컴포넌트는 상호 커뮤니케이션 로직이 줄어들고 더욱 generic해진다. 
+
+>> 사용처
+채팅 어플리 케이션과 같은 메시지 기반 시스템에서 자주 사용된다.
+개체 집합이 복잡하지만 잘 정의된 방식으로 통신하는 경우.
+
+
+
+Participants:
+ApnaChatroom :- defines the interface for interacting with participants.
+ApnaChatroomImpl :- implements the operations defined by the Chatroom interface. The operations are managing the interactions between the objects: when one participant sends a message, the message is sent to the other participants.
+Participant :- defines an interface for the users involved in chatting.
+User1, User2, ...UserN :- implements Participant interface; the participant can be a number of users involved in chatting. But each Participant will keep only a reference to the ApnaChatRoom.
