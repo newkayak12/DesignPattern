@@ -1,4 +1,4 @@
-package structuralPattern.DecoratorPattern;
+package structuralPattern.decoratorPattern;
 
 public class SportsCar extends CarDecorator{
 

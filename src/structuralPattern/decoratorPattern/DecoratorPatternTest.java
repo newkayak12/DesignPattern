@@ -1,4 +1,4 @@
-package structuralPattern.DecoratorPattern;
+package structuralPattern.decoratorPattern;
 
 public class DecoratorPatternTest {
 	public static void main(String[] args) {
