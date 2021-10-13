@@ -1,0 +1,34 @@
+객체의 상태를 저장해서 이전의 상태로 되돌릴 때 사용한다. 그러나 이 작업이 캡슐화를 해치면 안된다. 
+메멘토 패턴은 토큰으로도 알려져 있다. 
+
+>> 장점 
+캡슐화 바운더리를 지킨다.
+원본을 단순화한다.
+
+>> 사용처
+undo, redo
+DB의 트랜잭션(롤백)
+
+
+
+
+
+
+	Memento:
+
+Stores internal state of the originator object. The state can include any number of state variables.
+The Memento must have two interfaces, an interface to the caretaker. 
+This interface must not allow any operations or any access to internal state stored by the memento and thus maintains the encapsulation. 
+The other interface is Originator and it allows the Originator to access any state variables necessary to the originator to restore the previous state.
+
+
+	Originator:
+
+Creates a memento object that will capture the internal state of Originator.
+Use the memento object to restore its previous state.
+
+
+	Caretaker:
+
+Responsible for keeping the memento.
+The memento is transparent to the caretaker, and the caretaker must not operate on it.
